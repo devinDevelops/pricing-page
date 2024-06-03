@@ -16,15 +16,30 @@ body {
 main {
   display: grid;
   justify-content: center;
-  margin-block-start: 8rem;
 }
 
 h2 {
   margin: 0;
 }
 
-.hidden {
-  display: none;
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+
+.sub-title {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.font-secondary {
+  font-family: var(--font-style-secondary);
+}
+
+/* ---PRICING CARDS--- */
+
+.plans-and-pricing {
+  margin-block-start: 8rem;
 }
 
 .pricing-cards-wrapper {
@@ -38,12 +53,6 @@ h2 {
   align-items: center;
   justify-content: center;
   gap: 5rem;
-}
-
-.plans-header h1 {
-  font-size: 2.5rem;
-  font-weight: 500;
-  font-family: var(--font-style-secondary);
 }
 
 .terms-toggle-wrapper {
@@ -130,18 +139,13 @@ h2 {
   border-bottom: solid 2px var(--color-primary);
 }
 
-.plan-title {
-  font-size: 2rem;
-  font-weight: 500;
-}
-
 .plan-description {
   font-size: 1.1rem;
   line-height: 1.5rem;
   margin-block: 0.5rem 1.5rem;
 }
 
-.price-text {
+.plan-price {
   display: flex;
   gap: 0.5rem;
   font-size: 2rem;
@@ -150,16 +154,16 @@ h2 {
   margin-block-end: 0.25rem;
 }
 
-.dollar-sign {
+.plan-price .dollar-sign {
   margin-block-start: 0.75rem;
 }
 
-.price-num {
+.plan-price .price-num {
   font-size: 5rem;
   font-weight: 500;
 }
 
-.price-text .plan-term {
+.plan-price .plan-term {
   margin-inline-start: 0.5rem;
   align-self: end;
 }
@@ -251,4 +255,83 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+
+/* --- ADD ONS --- */
+
+.add-ons {
+  display: grid;
+  gap: 1.25rem;
+  margin-block-start: 5rem;
+}
+
+.add-ons .section-title {
+  justify-self: center;
+}
+
+.add-on-cards-wrapper {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.add-on-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem;
+  border-radius: 6px;
+  box-shadow: rgba(149, 157, 165, 0.15) 0px 8px 24px;
+}
+
+.add-on-card .description .sub-title {
+  font-size: 1.5rem;
+}
+
+.add-on-card .description p {
+  font-size: 1.1rem;
+  font-weight: 300;
+  margin-block: 0.5rem 0;
+}
+
+.add-on-card .description p:last-of-type {
+  margin-block-end: 0.85rem;
+}
+
+.add-on-card-link {
+  color: var(--color-primary);
+  font-weight: 500;
+  font-size: 1.1rem;
+  text-decoration: none;
+  position: relative;
+}
+
+.add-on-card-link::after {
+  content: url('./images/angle-right.svg');
+  position: absolute;
+  top: -2px;
+  width: 24px;
+  height: 24px;
+  filter: invert(53%) sepia(42%) saturate(3751%) hue-rotate(131deg)
+    brightness(91%) contrast(101%);
+  transition: transform 0.15s linear;
+}
+
+.add-on-card-link:hover::after {
+  transform: translateX(7px);
+}
+
+.add-on-card .pricing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.add-on-card .pricing .price-num {
+  font-size: 3.5rem;
+  font-weight: 500;
+}
+
+.add-on-card .pricing .price-num.free {
+  font-size: 2.5rem;
 }
