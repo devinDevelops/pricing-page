@@ -18,8 +18,22 @@ main {
   justify-content: center;
 }
 
+section {
+  margin-block-start: 8rem;
+}
+
+h1,
 h2 {
   margin: 0;
+}
+
+button {
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+
+.margin-bottom {
+  margin-block-end: 2rem;
 }
 
 .section-title {
@@ -36,11 +50,23 @@ h2 {
   font-family: var(--font-style-secondary);
 }
 
-/* ---PRICING CARDS--- */
-
-.plans-and-pricing {
-  margin-block-start: 8rem;
+.clr-primary {
+  color: var(--color-primary);
 }
+
+.start-free-btn {
+  border: none;
+  color: var(--color-white);
+  background-color: var(--color-primary);
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.start-free-btn:hover {
+  background-color: var(--color-primary-dark);
+}
+
+/* ---PRICING CARDS--- */
 
 .pricing-cards-wrapper {
   display: flex;
@@ -180,12 +206,7 @@ h2 {
 }
 
 .pricing-card .start-free-btn {
-  border: none;
-  color: var(--color-white);
-  background-color: var(--color-primary);
   padding: 2rem;
-  border-radius: 6px;
-  font-size: 1rem;
   font-weight: bold;
 }
 
@@ -261,8 +282,6 @@ input:checked + .slider:before {
 
 .add-ons {
   display: grid;
-  gap: 1.25rem;
-  margin-block-start: 5rem;
 }
 
 .add-ons .section-title {
@@ -334,4 +353,28 @@ input:checked + .slider:before {
 
 .add-on-card .pricing .price-num.free {
   font-size: 2.5rem;
+}
+
+/* ---CALL TO ACTION--- */
+
+.cta-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f2faff;
+  padding: 4.5rem 3rem;
+  margin-inline: 7rem;
+}
+
+.cta-wrapper h1 {
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+.cta-wrapper .start-free-btn {
+  padding: 1.5rem 3rem;
+}
+
+.cta-wrapper .start-free-btn:hover {
+  background-color: #21b895;
 }
