@@ -23,7 +23,9 @@ section {
 }
 
 h1,
-h2 {
+h2,
+h3,
+p {
   margin: 0;
 }
 
@@ -377,4 +379,49 @@ input:checked + .slider:before {
 
 .cta-wrapper .start-free-btn:hover {
   background-color: #21b895;
+}
+
+/* FAQ */
+
+.faq {
+  display: grid;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.faq .section-title {
+  font-weight: 700;
+  justify-self: center;
+}
+
+.faq-accordion {
+  width: 900px;
+}
+
+.question-title {
+  position: relative;
+  font-size: 1.75rem;
+  margin-block: 1.35rem 0.85rem;
+}
+
+.question-title:hover {
+  color: var(--color-primary);
+  cursor: pointer;
+  transition: color 0.1s;
+}
+
+.question-title::after {
+  position: absolute;
+  top: -5px;
+  right: 0;
+  content: url(./images/angle-down.svg);
+  height: 40px;
+  width: 40px;
+  filter: invert(91%) sepia(0%) saturate(1714%) hue-rotate(206deg)
+    brightness(92%) contrast(90%);
+}
+
+.answer {
+  font-size: 1.2rem;
+  line-height: 1.9;
 }
